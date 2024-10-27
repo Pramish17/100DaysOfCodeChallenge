@@ -25,6 +25,6 @@ public class AssignCookies {
             }
         }
 
-        return aPointer;
+        return aPointer; /* Time Complexity O(glogg+slogs) */
     }
 }
