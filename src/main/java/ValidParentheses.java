@@ -1,8 +1,8 @@
 import java.util.Stack;
 
-public class ValidParantheses {
+public class ValidParentheses {
     public static void main(String[] args) {
-        String s = "[()]";
+        String s = "(){]";
         System.out.println(isValid(s));
     }
 
@@ -20,6 +20,8 @@ public class ValidParantheses {
                 stack.pop();
             }else if (c == ']' && !stack.isEmpty() && stack.peek() == '[') {
                 stack.pop();
+            }else {
+                return false;
             }
         }
         return stack.isEmpty(); /* Time Complexity O(n) */
